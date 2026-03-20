@@ -174,7 +174,6 @@ int main() {
 
             if (checkCollision(&snake)) {
                 displayMode = ENDGAME;
-                isInit = 1;
                 break;
             }
 
@@ -185,19 +184,19 @@ int main() {
                 break;
             }
 
-            napms(200);
+            napms(150);
             break;
         case ENDGAME:
             werase(win);
             box(win, 0, 0);
-            mvwprintw(win, MAP_SIZE / 2 - 2, MAP_SIZE - 5, "GAME OVER");
-            mvwprintw(win, MAP_SIZE / 2, MAP_SIZE - 10, "Press Enter to Exit");
+            mvwprintw(win, MAP_SIZE / 2 - 1, MAP_SIZE - 5, "GAME OVER");
+            mvwprintw(win, MAP_SIZE / 2 + 1, MAP_SIZE - 6, "Press Enter");
             wrefresh(win);
 
-            ch = getch();
-            if (ch == KEY_ENTER) {
+            if(ch == KEY_ENTER){
                 freeSnake(&snake);
-                exit = 1;
+                isInit = 1;
+                displayMode = MAIN;
             }
             break;
         }
