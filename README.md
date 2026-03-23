@@ -3,7 +3,7 @@
 ```bash
 sudo apt install libncurses-dev
 
-gcc *.c -o * -l ncursesw
+gcc snake.c -o snake -l ncursesw
 ```
 
 ---
