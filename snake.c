@@ -19,7 +19,7 @@
 #define SCORE_TEXT_Y 0
 #define SCORE_TEXT_X 2
 #define GAME_PERIOD 150
-#define AUTO_MODE_PERIOD 10
+#define AUTO_MODE_PERIOD 50
 #define TITLE_PERIOD 200
 
 #define UNICODE_FULL_BLOCK "██"
